@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Demo App DSC</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_txt">Developer Student Clubs is a community where everyone is welcome. We help students bridge the gap between theory and practice and grow their knowledge by providing a peer-to-peer learning environment, by conducting workshops, study jams and building solutions for local businesses. Developer Student Clubs is a program supported by Google Developers.</string>
+    <string name="demo_app_dsc">Demo app DSC</string>
+    <string name="visit_dscsastra_com">Visit dscsastra.com</string>
+    <string name="event">Event</string>
+</resources>
