@@ -7,4 +7,5 @@
     <string name="demo_app_dsc">Demo app DSC</string>
     <string name="visit_dscsastra_com">Visit dscsastra.com</string>
     <string name="event">Event</string>
+    <string name="click_on_your_favourite_event_to_open">Click On Your Favourite Event To Open</string>
 </resources>

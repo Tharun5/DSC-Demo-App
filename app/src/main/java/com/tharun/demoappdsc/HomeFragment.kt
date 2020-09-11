@@ -14,23 +14,21 @@ class HomeFragment : Fragment() {
     lateinit var recyclerHome: RecyclerView
     lateinit var layoutManager: RecyclerView.LayoutManager
 
-    private val eventList = arrayListOf(
-            "Adobe XD Scratchclass - Introduction",
-            "Latest Innovation and Trends in Flutter",
-            "Discuss with DSC - Blockchain and Pi cryptocurrency",
-            "Discuss with DSC - Data Engineering with Spark using Databricks",
-            "Free Practical Cloud course",
-            "DeveLup Series - Machine Learning Novice to Jarvis",
-            "DeveLup Series - Problem Solving with Design Thinking",
-            "DeveLup Series - Touring google Cloud",
-            "DeveLup Series - Unboxing Mixed Reality",
-            "DeveLup Series - Flutter Zero to Hero",
-            "DeveLup Series - Kickstart with Firebase",
-            "DeveLup Series - Graphic Designing - Intermediate",
-            "DeveLup Series - Introduction to JavaScript",
-            "DeveLup Series - Getting started with LaTeX",
-            "DeveLup Series Launch"
+    val eventInfoList = arrayListOf<Event>(
+        Event("Adobe XD Scratchclass - Introduction", "https://www.youtube.com/watch?v=XFl43uTPnXw",R.drawable.ic_adobexd),
+        Event("Latest Innovation and Trends in Flutter", "https://www.youtube.com/watch?v=N89VGJVDGp4",R.drawable.ic_flutter),
+        Event("Introduction to Graphic Designing - Basics", "https://www.youtube.com/watch?v=KVgV-jNWI38",R.drawable.ic_photoshop),
+        Event("Free Practical Cloud course", "https://www.youtube.com/watch?v=jAAVNpnnCVo",R.drawable.ic_cloud),
+        Event("DeveLup Series - Machine Learning Novice to Jarvis", "https://www.youtube.com/watch?v=HsQLXm8qG6I",R.drawable.ic_ml),
+        Event("DeveLup Series - Touring google Cloud", "https://www.youtube.com/watch?v=0Lefoh5Dm_Q",R.drawable.ic_gcloud),
+        Event("DeveLup Series - Unboxing Mixed Reality", "https://www.youtube.com/watch?v=zPy9UNc-1fc",R.drawable.ic_ar),
+        Event("DeveLup Series - Flutter Zero to Hero", "https://www.youtube.com/watch?v=XtPlemLLh8s",R.drawable.ic_flutter),
+        Event("DeveLup Series - Kickstart with Firebase", "https://www.youtube.com/watch?v=fSIRtE1wLn8",R.drawable.ic_firebase),
+        Event("DeveLup Series - Graphic Designing - Intermediate", "https://www.youtube.com/watch?v=W-UNTtRV0Dk",R.drawable.ic_photoshop),
+        Event("DeveLup Series - Introduction to JavaScript", "https://www.youtube.com/watch?v=yLgl0TVlU6Y",R.drawable.ic_javascript),
+        Event("DeveLup Series - Getting started with LaTeX", "https://www.youtube.com/watch?v=HulcPIPJzU0",R.drawable.ic_latex)
     )
+
     lateinit var recyclerAdapter: HomeRecyclerAdapter
 
     override fun onCreateView(
@@ -42,7 +40,7 @@ class HomeFragment : Fragment() {
 
         recyclerHome = view.findViewById(R.id.recyclerHome)
         layoutManager = LinearLayoutManager(activity)
-        recyclerAdapter = HomeRecyclerAdapter(activity as Context, eventList)
+        recyclerAdapter = HomeRecyclerAdapter(activity as Context, eventInfoList)
         recyclerHome.adapter = recyclerAdapter
         recyclerHome.layoutManager = layoutManager
 
